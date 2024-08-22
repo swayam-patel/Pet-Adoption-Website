@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fur-Ever Home Adoption Center</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="main_body">
+        <div class="side_menu_container">
+            <ul class="side_menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/find_cat_dog">Find a dog/cat</a></li>
+                <li><a href="/dog_care">Dog Care</a></li>
+                <li><a href="/cat_care">Cat Care</a></li>
+                <li><a href="/pet_give_away">Have a pet to give away</a></li>
+                <li><a class="active">Contact Us</a></li>
+                <li><a href="/authenticate">Login/Create Account</a></li>
+            </ul>
+        </div>
+        <div class="main_content_container">
+            <h1>Contact Us</h1>
+            <p>If there is any problems with the website or you have any questions, please contact us</p>
+            <i>Test</i><br>
+            <i><a href="mailto:test@test.com">test@test.com</a></i>
+        </div>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

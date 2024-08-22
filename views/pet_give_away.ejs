@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fur-Ever Home Adoption Center</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/petGiveAway.js"></script>
+</head>
+
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="main_body">
+        <div class="side_menu_container">
+            <ul class="side_menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/find_cat_dog">Find a dog/cat</a></li>
+                <li><a href="/dog_care">Dog Care</a></li>
+                <li><a href="/cat_care">Cat Care</a></li>
+                <li><a class="active">Have a pet to give away</a></li>
+                <li><a href="/contact_us">Contact Us</a></li>
+                <li><a href="/authenticate">Login/Create Account</a></li>
+            </ul>
+        </div>
+        <div class="main_content_container">
+
+
+            <% if(!session.loggedin){ %>
+                <h1>You must log in before you can fill the form</h1>
+                <%- include('partials/auth.ejs') %>
+            <% } else{ %>  
+
+            <h1>Pet Give Away</h1>
+            <p> We Understand that this must be difficult, but we will help your beloved pet find a happy and loving
+                home with care and compassion.</p>
+
+            <form id="give_pet">
+                <label>Pet Type: </label>
+                <label>
+                    <input type="radio" name="pet" value="cat">
+                    Cat
+                </label>
+                <label>
+                    <input type="radio" name="pet" value="dog">
+                    Dog
+                </label>
+
+                <br>
+                <br>
+
+                <label>What breed is your pet? (Check wisely as dog and cat breeds are included together)</label>
+                <select name="breed">
+                    <option value="">Choose breed</option>
+                    <option>Mix Breed</option>
+                    <option>Labrador Retriever (Dog)</option>
+                    <option>Golden Retriever (Dog)</option>
+                    <option>German Shepherd (Dog)</option>
+                    <option>Ragdoll (Cat)</option>
+                    <option>Main coon cat (Cat)</option>
+                    <option>Devon Rex (Cat)</option>
+                </select>
+
+                <br>
+                <br>
+
+                <label>What age is your pet?</label>
+                <select name="age">
+                    <option value="">Choose age range</option>
+                    <option>0 - 2 years old</option>
+                    <option>2 - 5 years old</option>
+                    <option>5 - 8 years old</option>
+                    <option>8 - 10 years old</option>
+                    <option>More 10 years old</option>
+                </select>
+
+                <br>
+                <br>
+
+                <label>Does your pet: </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="pet_suitablity" value="get_along_with_dog">
+                    Get along with other dogs?
+                </label>
+                <label>
+                    <input type="checkbox" name="pet_suitablity" value="get_along_with_cat">
+                    Get along with other cats?
+                </label>
+                <label>
+                    <input type="checkbox" name="pet_suitablity" value="get_along_with_family_and_small_children">
+                    Get along with family having small children
+                </label>
+
+                <br>
+                <br>
+
+                <label>Describe your beloved pet in brief</label>
+                <br>
+                <textarea name="pet_description" id="text_area_pet_describe" rows="4" cols="50"></textarea>
+
+                <br>
+                <br>
+
+                <label>Owner's First Name: </label>
+                <input type="text" name="first_name">
+
+                <br>
+                <br>
+
+                <label>Owner's Family Name: </label>
+                <input type="text" name="family_name">
+
+                <br>
+                <br>
+
+                <label>Email: </label>
+                <input type="text" name="email">
+
+                <br>
+                <br>
+
+                <div class="button-container">
+                    <button type="button" class="button_submit" onclick="submitForm()">Submit</button>
+                    <button type="button"  class="button_clear" onclick="clearForm()">Clear</button>
+                </div>
+            </form>
+
+            <% } %>
+
+        </div>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

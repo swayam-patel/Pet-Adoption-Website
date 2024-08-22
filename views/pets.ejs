@@ -1,0 +1,107 @@
+<!--UNUSED FILE-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fur-Ever Home Adoption Center</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/pet_details.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="main_body">
+        <div class="side_menu_container">
+            <ul class="side_menu">
+                <li><a href="/">Home</a></li>
+                <li><a class="active">Browse Available Pets</a></li>
+                <li><a href="/find_cat_dog">Find a dog/cat</a></li>
+                <li><a href="/dog_care">Dog Care</a></li>
+                <li><a href="/cat_care">Cat Care</a></li>
+                <li><a href="/pet_give_away">Have a pet to give away</a></li>
+                <li><a href="/contact_us">Contact Us</a></li>
+                <li><a href="/authenticate">Login/Create Account</a></li>
+            </ul>
+        </div>
+        <div class="main_content_container">
+            <h1>Browse Pets</h1>
+            <!-- <p>The pets are coming soon!</p> -->
+            <div id="pet_grid">
+                <div class="pet_details">
+                    <img class="pet_image" src="https://upload.wikimedia.org/wikipedia/commons/2/26/YellowLabradorLooking_new.jpg" alt="Dog 1" height="200">
+                    
+                    <p>Labrador Retriever</p>
+                    <p>8-10 years old</p>
+                    <p>Gets along with other dogs</p>
+                    <p>Meet Rusty, the spirited Labrador Retriever with a heart of gold. His boundless energy and loyalty make him the perfect companion for any adventure-loving family.</p>
+                    <button class="interested_button">Interested</button>
+
+                </div>
+
+                <div class="pet_details">
+                    <!-- Image Credit - https://imageserver.petsbest.com/marketing/blog/maine-coon.jpg -->
+                    <img class="pet_image" src="https://imageserver.petsbest.com/marketing/blog/maine-coon.jpg" alt="Dog 1" height="200">
+                    
+                    <p>Maine Coon</p>
+                    <p>3-5 years old</p>
+                    <p>Gets along with other cats</p>
+                    <p>Meet Whiskers, our Maine Coon king! His fluffy mane and gentle purrs make him the purrfect companion. Whiskers' playful antics and loving personality brighten our days endlessly.</p>
+                    <button class="interested_button">Interested</button>
+
+                </div>
+
+                <div class="pet_details">
+                    <!-- Image Credit - https://www.dogsblog.com/wp-content/uploads/2015/04/8d34cde8e3a757d42143998d7afd6c45.jpg -->
+                    <img class="pet_image" src="https://www.dogsblog.com/wp-content/uploads/2015/04/8d34cde8e3a757d42143998d7afd6c45.jpg" alt="Dog 1" height="200">
+
+                    <p>German Shephard</p>
+                    <p>5-8 years old</p>
+                    <p>Gets along with other dogs, cats, small children of family</p>
+                    <p>Meet Max, our German Shepherd legend! His loyal heart and protective nature make him the ultimate family guardian. Max's intelligence and playfulness keep life exciting and joyful.</p>
+                    <button class="interested_button">Interested</button>
+
+                </div>
+
+                <div class="pet_details">
+                    <!-- Image Credit - https://www.petrebels.com/en/wp-content/uploads/sites/3/2023/03/kulli-kittus-mVDqIXh-dP8-unsplash-1-1024x683-1.jpg -->
+                    <img class="pet_image" src="https://www.petrebels.com/en/wp-content/uploads/sites/3/2023/03/kulli-kittus-mVDqIXh-dP8-unsplash-1-1024x683-1.jpg" alt="Cat 2" height="200">
+                    
+                    <p>Devon Rex</p>
+                    <p>0-3 years old</p>
+                    <p>Gets along with other cat and dogs</p>
+                    <p>Check out Gizmo, our Devon Rex dude! His curly fur and playful tricks keep us grinning non-stop. He's the heart of our home, full of charm and endless cuddles.</p>
+                    <button class="interested_button">Interested</button>
+
+                </div>
+
+                <div class="pet_details">
+                    <!-- Image Credit - https://13630656.rocketcdn.me/wp-content/uploads/2020/01/Golden4.jpg -->
+                    <img class="pet_image" src="https://13630656.rocketcdn.me/wp-content/uploads/2020/01/Golden4.jpg" alt="Dog 3" height="200">
+                    
+                    <p>Golden Retriever</p>
+                    <p>More than 10 years old</p>
+                    <p>Gets along with other dogs and small children of the family</p>
+                    <p>Say hello to Buddy, our Golden Retriever champ! Always up for a game of fetch and never short on love, he's the heart and joy of our family.</p>
+                    <button class="interested_button">Interested</button>
+
+                </div>
+
+                <div class="pet_details">
+                    <!-- Image Credit - https://moderncat.com/wp-content/uploads/2015/12/Ragdoll-640x436.jpg -->
+                    <img class="pet_image" src="https://moderncat.com/wp-content/uploads/2015/12/Ragdoll-640x436.jpg" alt="Cat 3" height="200">
+                    
+                    <p>Ragdoll Cat</p>
+                    <p>3-5 years old</p>
+                    <p>Gets along with small children of the family</p>
+                    <p>Willow, our cherished Ragdoll cat, enchants with her gentle demeanor and mesmerizing blue eyes, bringing tranquility and joy to our home with every graceful movement.</p>
+                    <button class="interested_button">Interested</button>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

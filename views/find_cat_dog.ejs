@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fur-Ever Home Adoption Center</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/pet_details.css" rel="stylesheet" type="text/css">
+
+    <script src="js/findCatDog.js"></script>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="main_body">
+        <div class="side_menu_container">
+            <ul class="side_menu">
+                <li><a href="/">Home</a></li>
+                <li><a class="active">Find a dog/cat</a></li>
+                <li><a href="/dog_care">Dog Care</a></li>
+                <li><a href="/cat_care">Cat Care</a></li>
+                <li><a href="/pet_give_away">Have a pet to give away</a></li>
+                <li><a href="/contact_us">Contact Us</a></li>
+                <li><a href="/authenticate">Login/Create Account</a></li>
+            </ul>
+        </div>
+        <div class="main_content_container">
+        <form id="find_form">
+            <h1>Find a dog/cat</h1>
+            <p>Start Your Journey to a Lifetime of Love and Loyalty with Your New Pet</p>
+            <br>
+            <label>Which type of pet do you wish to adopt?</label>
+            <label>
+                <input type="radio" name="pet" value="cat">
+                Cat
+            </label>
+            <label>
+                <input type="radio" name="pet" value="dog">
+                Dog
+            </label>
+
+            <br>
+            <br>
+
+            <label>What breed should be your pet? (Check wisely as dog and cat breeds are included together)</label>
+            <select name="breed">
+                <option value="">Choose breed</option>
+                <option>Mix Breed(Cat/Dog)</option>
+                <option>Labrador Retriever (Dog)</option>
+                <option>Golden Retriever (Dog)</option>
+                <option>German Shepherd (Dog)</option>
+                <option>Ragdoll (Cat)</option>
+                <option>Main coon cat (Cat)</option>
+                <option>Devon Rex (Cat)</option>
+                <option>Does not matter</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label>What age should be your pet? </label>
+            <select name="age">
+                <option value="">Choose age range</option>
+                <option>0 - 2 years old</option>
+                <option>2 - 5 years old</option>
+                <option>5 - 8 years old</option>
+                <option>8 - 10 years old</option>
+                <option>More 10 years old</option>
+                <option>Does not matter</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label>Gender:</label>
+            <label>
+                <input type="radio" name="gender" value="female">
+                Female
+            </label>
+            <label>
+                <input type="radio" name="gender" value="male">
+                Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="does_not_matter">
+                Does not matter
+            </label>
+
+            <br>
+            <br>
+
+            <!-- <label>Whether it needs to get along with other dogs, other cats, small children?</label>
+            <select name="get_along">
+                <option value="">Choose option</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Does not matter</option>
+            </select> -->
+            <label>Does your pet: </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="pet_suitablity" value="get_along_with_dog">
+                    Get along with other dogs?
+                </label>
+                <label>
+                    <input type="checkbox" name="pet_suitablity" value="get_along_with_cat">
+                    Get along with other cats?
+                </label>
+                <label>
+                    <input type="checkbox" name="pet_suitablity" value="get_along_with_family_and_small_children">
+                    Get along with family having small children
+                </label>
+
+            <br>
+            <br>
+
+            <div class="button-container">
+                <button class="button_submit" type="button" onclick="submitForm()">Submit</button>
+                <button class="button_clear" type="button" onclick="clearForm()">Clear</button>
+            </div>
+        </form>
+
+        <div id="filter_data">
+            <% if(!isSearch){ %>
+            <% } else{ %>
+                <% if(pets.length != 0){ %>
+                    <% pets.forEach(pet => { %>
+                        <div class="pet_details">
+                            <p><%= pet.petType %></p>                      
+                            <p><%= pet.breed %></p>
+                            <p><%= pet.age %></p>
+                            <p><%= pet.getAlong %></p>
+                            <p><%= pet.description %></p>
+                            <button class="interested_button">Interested</button>
+                        </div>
+        
+                      <% }); %>
+                      <% } else{ %> 
+                        <p>No Data Found</p>
+                        <% } %>
+
+              <% } %>
+        </div>
+        </div>
+    </div>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

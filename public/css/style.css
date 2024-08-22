@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'LibreBaskerville_Regular'; /*a name to be used later*/
+    src: url('../Libre_Baskerville/LibreBaskerville-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'LibreBaskerville_Bold'; /*a name to be used later*/
+    src: url('../Libre_Baskerville/LibreBaskerville-Bold.ttf'); /*URL to font*/
+}
+
+.header_title {
+    font-family: "LibreBaskerville_Regular";
+}
+
+body { 
+    margin:0px; 
+    font-family:'LibreBaskerville_Regular';
+    color: rgb(0,51,0);
+}
+
+
+header {
+    background-color: rgb(147, 197, 114);
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(53, 57, 53);
+    font-family:'LibreBaskerville_Regular';
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.main_body {
+    /* width: 100%; */
+    margin: 0;
+    clear: none;
+    display: flex;
+    /* align-items: stretch; */
+    margin: 0;
+    min-height:75vh;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .main_body {
+    flex-direction: column;
+  }
+
+  .side_menu_container {
+    border-bottom: 1px solid rgb(53, 57, 53) !important;
+    border-right: none !important;
+    flex: 0 !important;
+  }
+
+  .main_content_container {
+    flex: 1 !important;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .header_title {
+    text-align: center;
+  }
+
+}
+
+.main_content_container {
+    float: left;
+    padding: 20px;
+    background-color: #f1f1f1;
+    flex: 0.85;
+    height: auto;
+    min-height: 100%;
+}
+
+footer {
+    background-color: rgb(147, 197, 114);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.side_menu_container {
+    float: left;
+    background-color: #f1f1f1;
+    height: auto;
+    flex: 0.15;
+    border-right: 1px solid rgb(53, 57, 53);
+    border-bottom: none;
+    padding:0
+}
+
+
+.side_menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    width: 100%
+}
+
+.side_menu li a {
+    display: block;
+    color: #000;
+    padding: 16px;
+    text-decoration: none;
+    
+}
+
+.side_menu li {
+    text-align: left;
+}
+
+
+.side_menu li a.active {
+    background-color: rgb(147, 197, 114);
+    color: white;
+}
+
+.side_menu li a:hover:not(.active) {
+    background-color: rgb(67, 67, 67);
+    color: white;
+}
+
+.general_list li {
+    margin-bottom:15px;
+}
+
+.care_tips_list li p{
+    font-family: "LibreBaskerville_Bold";
+    margin-bottom:15px;
+}
+
+.button_submit {
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(0,51,0);
+    color: white;
+    border: none;
+    padding: 0 30px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Librebaskerville_Regular";
+}
+
+.button_clear {
+    height: 50px;
+    border-radius: 25px;
+    color: rgb(0,51,0);
+    background-color: white;
+    border: 2px solid rgb(0,51,0);
+    padding: 0 30px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Librebaskerville_Regular";
+    
+}
+.button-container {
+    display: flex;
+    justify-content: left;
+    
+}
+
+#text_area_pet_describe {
+    max-width: 100%;
+}

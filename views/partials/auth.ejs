@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+        <h1>Login/Create Account</h1>
+        <form id="account_form" method="POST">
+            <label>
+                <input type="radio" name="action" value="create" required>
+                Create Account
+            </label>
+            <label>
+                <input type="radio" name="action" value="login">
+                Log In
+            </label>
+
+            <div id="form_fields">
+                <label for="username">Username: (A username can contain letters (both upper and lower case) and digits only.)</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="password">Password: (A password must be at least 4 characters long, characters are to be letters and digits only, must have one letter and at least one digit.)</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <button class="button_submit" type="submit" formaction="/submit_form">Submit</button>
+            </div>
+        </form>
+</body>
+</html>

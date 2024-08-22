@@ -1,0 +1,51 @@
+#pet_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1200px) {
+    #pet_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    #pet_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    #pet_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.pet_details {
+    /* width: 25%; */
+    border: 2px solid rgb(147, 197, 114);
+    border-radius: 20px;
+    /* border-collapse: separate; */
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+
+.pet_image {
+    object-fit: fill;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.interested_button {
+    height: 30px;
+    border-radius: 15px;
+    color: rgb(0, 51, 0);
+    background-color: white;
+    border: 2px solid rgb(0, 51, 0);
+    padding: 0 30px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: "Librebaskerville_Regular";
+}
